@@ -18,15 +18,15 @@ public class LevelManager : Singleton<LevelManager>
     }
 }
 
-public class Singleton<T> : MonoBehaviour
+public class Singleton<T> : MonoBehaviour where T : Component
 {
-    public static Singleton<T> Instance;
+    public static T Instance;
 
     protected virtual void Awake()
     {
         if(ReferenceEquals(Instance,null))
         {
-            Instance = this;
+            Instance = this as T;
             DontDestroyOnLoad(gameObject);
             return;
         }

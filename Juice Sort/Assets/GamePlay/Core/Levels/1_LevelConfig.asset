@@ -34,4 +34,4 @@ MonoBehaviour:
       _fruitPrefab: {fileID: 0}
   - name: Empty
     _fruits: []
-  _levelIndex: 0
+  _levelIndex: 1
