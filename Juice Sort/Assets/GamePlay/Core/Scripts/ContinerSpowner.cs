@@ -2,7 +2,7 @@ using GamePlay;
 using System;
 using UnityEngine;
 
-public class Spowner : MonoBehaviour
+public class ContinerSpowner : MonoBehaviour
 {
     private void Awake()
     {
