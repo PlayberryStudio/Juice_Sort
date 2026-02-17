@@ -1,4 +1,6 @@
+
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,7 +14,7 @@ namespace GamePlay.Tools
         private bool isScreenWidth, isScreenheight;
 
         [SerializeField]
-        private Vector2 size,grid;
+        public Vector2 size,grid;
 
         [SerializeField]
         float spacing = .1f;
@@ -24,7 +26,7 @@ namespace GamePlay.Tools
         private GameObject prefab;
 
         [SerializeField]
-        private Vector2 childSize;
+        public Vector2 childSize;
 
         [SerializeField]
         private Transform pool;
@@ -43,28 +45,31 @@ namespace GamePlay.Tools
             Debug.Log(raito);
 
             size *= raito;
-
-            DrawCells(grid, childSize);
         }
 
-        private void DrawCells(Vector2 grid, Vector2 cellSize)
+        public List<GameObject> DrawCells(Vector2 grid, Vector2 cellSize)
         {
             GetFirstYPos(cellSize, out float yOffset);
+
+            List<GameObject> objects = new List<GameObject>();
             Debug.Log("yOffset : "+ yOffset);
             for (int y = 0;y < grid.y; y++)
             {
                 GetFirstXPos(cellSize.x, pool.childCount, y, grid.x,spacing, out float xOffset);
                 for (int x = 0; x < grid.x; x++)
                 {
-                    GameObject obg = Instantiate(prefab);
-                    obg.transform.localPosition = new Vector3(xOffset, yOffset);
+                    GameObject obj = Instantiate(prefab);
+                    obj.transform.localPosition = new Vector3(xOffset, yOffset);
 
                     xOffset -= cellSize.x + spacing;
                     Debug.Log("xOffset "+ xOffset);
+                    objects.Add(obj);
                 }
 
                 yOffset -= cellSize.y + spacing;
             }
+
+            return objects;
         }
 
         private void GetFirstYPos(Vector2 child,out float firstYPoint)

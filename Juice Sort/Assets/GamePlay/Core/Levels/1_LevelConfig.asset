@@ -17,21 +17,24 @@ MonoBehaviour:
     _fruits:
     - name: Apple 1
       _fruitType: 1
-      _fruitPrefab: {fileID: 0}
+      _fruitPrefab: {fileID: 2828651737225944587, guid: 4e49359e46e8b4c4c8ebc69c8f174075, type: 3}
     - name: Orange 1
       _fruitType: 2
-      _fruitPrefab: {fileID: 0}
+      _fruitPrefab: {fileID: 2836920757977351162, guid: a7d4dc3aa75dc8f4bab345c1a44636f9, type: 3}
     - name: Orange 2
       _fruitType: 2
-      _fruitPrefab: {fileID: 0}
+      _fruitPrefab: {fileID: 2836920757977351162, guid: a7d4dc3aa75dc8f4bab345c1a44636f9, type: 3}
+    - name: Apple 2
+      _fruitType: 1
+      _fruitPrefab: {fileID: 2828651737225944587, guid: 4e49359e46e8b4c4c8ebc69c8f174075, type: 3}
   - name: Second continer
     _fruits:
     - name: Apple
       _fruitType: 1
-      _fruitPrefab: {fileID: 0}
+      _fruitPrefab: {fileID: 2828651737225944587, guid: 4e49359e46e8b4c4c8ebc69c8f174075, type: 3}
     - name: Apple 2
       _fruitType: 1
-      _fruitPrefab: {fileID: 0}
+      _fruitPrefab: {fileID: 2828651737225944587, guid: 4e49359e46e8b4c4c8ebc69c8f174075, type: 3}
   - name: Empty
     _fruits: []
   _levelIndex: 1

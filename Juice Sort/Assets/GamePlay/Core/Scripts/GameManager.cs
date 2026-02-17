@@ -6,6 +6,9 @@ public class GameManager : Singleton<GameManager>
 {
     public static Action<LevelConfig> OnLevelLoaded;
 
+    public GameObject orange;
+    public GameObject apple;
+
     [SerializeField]
     private int levelIndex = 1;
 
